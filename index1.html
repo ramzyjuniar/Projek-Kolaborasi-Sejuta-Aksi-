@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kolaborasi, Sejuta Aksi!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --ink: #202522;
+      --muted: #68716b;
+      --accent: #222151;
+      --accent-hover: #1c7246;
+      --paper: #f7f7f2;
+      --font-sans: 'Lexend Deca', sans-serif;
+    }
+    @theme inline {
+      --color-primary: var(--accent);
+      --color-primary-hover: var(--accent-hover);
+      --color-ink: var(--ink);
+      --color-paper: var(--paper);
+      --color-muted: var(--muted);
+      --font-sans: var(--font-sans);
+    }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--paper);
+      color: var(--ink);
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .anim-fade-nav {
+      animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .scroll-element {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .scroll-element.scrolled {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary selection:text-white overflow-x-hidden">
+
+  <header class="sticky top-0 z-50 bg-[#f7f7f2]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between anim-fade-nav">
+      <div class="flex items-center gap-3 sm:gap-5 active:scale-95 transition-transform duration-200 cursor-pointer">
+        <div class="flex items-center">
+          <img src="ict2627.jpg" alt="Logo ICT" class="w-10 h-10 sm:w-11 sm:h-11 object-cover rounded-full shadow-sm border border-gray-200">
+        </div>
+
+        <div class="w-px h-7 sm:h-8 bg-gray-300"></div>
+
+        <div class="flex items-center gap-2">
+          <img src="logosmkn2cikbar.png" alt="Logo SMKN 2 Cikarang Barat" class="h-9 sm:h-10 w-auto object-contain">
+          <span class="font-bold text-[11px] sm:text-sm text-ink leading-tight hidden sm:block">
+            ICT SMK Negeri 2<br>Cikarang Barat
+          </span>
+        </div>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-ink focus:outline-none p-2 ml-auto">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+        <a href="index1.html" class="text-ink border-b-2 border-primary pb-1">Beranda</a>
+        <a href="#tentang" class="text-muted hover:text-ink transition-colors pb-1 border-b-2 border-transparent hover:border-gray-300">Tentang</a>
+        <a href="galeri (1).html" class="text-muted hover:text-ink transition-colors pb-1 border-b-2 border-transparent hover:border-gray-300">Galeri Foto</a>
+        <a href="galeri (1).html" class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full transition-all shadow-md ml-2 hover:-translate-y-0.5">
+          Jelajahi Galeri
+        </a>
+      </nav>
+    </div>
+
+    <div id="mobile-menu" class="hidden flex-col w-full bg-white border-b border-gray-200 lg:hidden shadow-lg absolute top-full left-0">
+      <a href="index1.html" class="px-6 py-4 text-ink font-medium bg-gray-50 border-b border-gray-100">Beranda</a>
+      <a href="#tentang" class="px-6 py-4 text-muted hover:text-ink font-medium border-b border-gray-100">Tentang</a>
+      <a href="galeri (1).html" class="px-6 py-4 text-muted hover:text-ink font-medium">Galeri Foto</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full">
+        <div class="w-full lg:w-1/2 space-y-6 text-center lg:text-left scroll-element">
+          <p class="text-primary font-bold tracking-[0.16em] text-xs uppercase">Seni & Teknologi</p>
+          <h1 class="text-5xl lg:text-6xl font-semibold text-ink leading-[1.1] tracking-tight">
+            Kolaborasi, <br>Sejuta Aksi!
+          </h1>
+          <p class="text-lg text-muted max-w-lg mx-auto lg:mx-0 font-normal leading-relaxed">
+            Satu Ruang Kolaborasi, Sejuta Aksi Tanpa Batasi Imajinasi. Tempat berkumpulnya karya dari bidang Fotografi, DKV, dan Programming.
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-4">
+            <a href="galeri (1).html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-medium py-3 px-7 rounded-full shadow-md transition-all hover:-translate-y-1 active:scale-95">
+              Lihat Galeri <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#tentang" class="inline-flex border-2 border-gray-200 hover:border-ink hover:text-ink text-muted font-medium py-3 px-7 rounded-full transition-all hover:-translate-y-1 bg-white/50">
+              Tentang Kami
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-1/2 relative group scroll-element" style="transition-delay: 200ms;">
+          <div class="absolute -inset-2 bg-primary/10 rounded-3xl blur-xl group-hover:bg-primary/20 transition-all duration-500"></div>
+          <img src="pohon1.jpeg" alt="Kolaborasi Seni dan Teknologi" class="relative w-full min-h-[350px] lg:min-h-[420px] object-cover rounded-3xl shadow-[0_20px_40px_rgba(28,40,30,0.1)] border border-white transition-transform duration-500 group-hover:scale-[1.01]">
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20 border-t border-gray-100">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-10 scroll-element">
+          <div>
+            <p class="text-primary font-bold tracking-[0.16em] text-xs uppercase mb-2">Sorotan Karya</p>
+            <h2 class="text-3xl font-semibold text-ink">Cerita di balik setiap karya</h2>
+          </div>
+          <a href="galeri (1).html" class="text-primary font-semibold hover:text-primary-hover transition-colors">Lihat semua karya →</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="flex flex-col group scroll-element bg-white rounded-2xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-gray-200" style="transition-delay: 100ms;">
+            <div class="overflow-hidden w-full">
+              <img src="IMG-20261030-WA0188.jpeg" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105" alt="Rooted in Light">
+            </div>
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold text-ink mb-2">Rooted in Light</h3>
+              <p class="text-muted text-sm leading-relaxed">Potret sudut pandang rendah menatap batang pohon yang menjulang dan rimbun dedaunan yang ditembus hangatnya cahaya matahari, menggambarkan keteguhan untuk terus bertumbuh di setiap musim.</p>
+            </div>
+          </article>
+
+          <article class="flex flex-col group scroll-element bg-white rounded-2xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-gray-200" style="transition-delay: 200ms;">
+            <div class="overflow-hidden w-full">
+              <img src="taman2cikbar.jpeg" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105" alt="The Path Ahead">
+            </div>
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold text-ink mb-2">The Path Ahead</h3>
+              <p class="text-muted text-sm leading-relaxed">Rimbun daun pucuk merah yang mengiringi jalan setapak di taman sekolah, menghadirkan nuansa tenang sekaligus pengingat bahwa langkah ke depan selalu penuh harapan.</p>
+            </div>
+          </article>
+        </div>
+
+        <article class="mt-8 group scroll-element bg-paper/60 rounded-3xl overflow-hidden shadow-lg shadow-gray-200/50 border border-gray-100 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-200 flex flex-col md:flex-row items-center" style="transition-delay: 300ms;">
+          <div class="w-full max-w-[260px] md:max-w-none md:w-64 lg:w-72 shrink-0 overflow-hidden mt-6 md:mt-0 rounded-2xl md:rounded-none">
+            <img src="2_20261030_211903_0001.png" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105" alt="Duduk Dulu Aja, Gak Buru-Buru">
+          </div>
+          <div class="p-6 sm:p-8 lg:p-12 text-center md:text-left">
+            <h3 class="text-2xl lg:text-3xl font-bold text-ink mb-3">Duduk Dulu Aja, Gak Buru-Buru</h3>
+            <p class="text-muted text-base leading-relaxed max-w-2xl">
+              Sudut meja dan kursi beton di bawah rindangnya pepohonan taman sekolah. Tempat singgah yang mengingatkan bahwa kursi kosong bukan berarti sepi, melainkan ruang untuk berhenti sejenak dan mengambil napas.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="tentang" class="py-24 bg-paper">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 scroll-element">
+        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 bg-white p-8 lg:p-12 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50">
+          <div class="w-full lg:w-5/12 text-center lg:text-left">
+            <p class="text-primary font-bold tracking-[0.16em] text-xs uppercase mb-2">Tentang Proyek Ini</p>
+            <h2 class="text-3xl lg:text-4xl font-semibold text-ink leading-tight">Galeri kolaborasi untuk inovasi yang berarti.</h2>
+          </div>
+          <div class="w-full lg:w-7/12 text-center lg:text-left">
+            <p class="text-lg text-muted leading-relaxed mb-6">
+              Proyek ini adalah ruang pameran digital tempat tiga dimensi kreativitas bersatu. Mahakarya visual dari Fotografi dan DKV diberikan 'nyawa' serta interaktivitas oleh keahlian Programming.
+            </p>
+            <a href="galeri (1).html" class="inline-block bg-primary hover:bg-primary-hover text-white font-medium py-3 px-8 rounded-full transition-all hover:-translate-y-1 shadow-md">
+              Buka Halaman Galeri
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-8 scroll-element">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-ink">Kelompok 1</span>
+      </div>
+      <span class="text-sm text-muted">© 2026 Kolaborasi Sejuta Aksi. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('scrolled');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.scroll-element').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
